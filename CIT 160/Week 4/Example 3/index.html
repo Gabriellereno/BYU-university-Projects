@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title> Sun of Odd Numbers </title>
+<script>
+function answer() {
+var cinco = 5;
+    var times = " X ";
+    var one = 1;
+    var cal;
+    while (one <= 12) {
+        cal = cinco + times + one + "<br>";
+        one++;
+    }
+    
+document.getElementById("output").innerHTML = cal;
+}
+
+</script>
+</head>
+<body>
+<h1><b>The five times table from 1 to 12</b></h1>
+<button type="button" onclick="answer()" >CHECK</button>     
+<div id="output"></div>
+</body>
+</html>

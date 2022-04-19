@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Volume</title>
+
+<script>
+
+    /*input: Amount in quarts
+*processing: calculate amount into liters
+*output: amount of liters
+*/
+    
+function volume() {
+    
+    var Q = parseFloat(document.getElementById('quartsinput').value);
+    
+    var L = Q / 1.0567;
+    L = Math.round(L *100)/100;
+
+    
+    document.getElementById('outputDiv').innerHTML = L;
+}
+</script>
+</head>
+
+<body>
+Quarts <input type="text" id="quartsinput" size="9"><br>  
+<br>  
+<button type="button" onclick="volume()">Volume in liters</button>  
+<div id="outputDiv"></div>  
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title> counts and returns the number of even integers in an array  </title>
+<script>
+/* counts and returns the number of even integers in an array */
+function countEvens(list) {
+   var list = [ 17, 8, 9, 5, 20 ];
+   var result = 0;
+    for (i = 0; i < list.length; i++) {
+    if ((list[i] % 2) == 0) {
+       result++;
+   }
+}
+    
+    document.getElementById("output").innerHTML = result;
+}
+    
+</script> 
+</head>
+<body>
+<h1>counts and returns the number of even integers in an array </h1>
+<p> var list = [ 17, 8, 9, 5, 20 ]</p>
+<button type="button" onclick="countEvens()">evens</button>
+<br>
+<div id="output"></div>
+</body>
+</html>

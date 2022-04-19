@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title> Investment Calculator </title>
+<script>
+/* Middle of elements */
+
+    function twentyOne(hand) {
+        var hand = [9 , 10];
+var result = "";
+var soma = 0;
+    for (var i = 0; i < hand.length; i++) {
+        if ((hand[i] % 2) == 0) {
+           soma += hand[i];
+        }
+    }
+    if (soma < 21) {
+        result = soma;
+    }
+    else if (soma > 21) {
+        result = "bust";
+    }
+document.getElementById("output").innerHTML = result;
+}
+
+
+    
+ 
+</script>
+</head>
+<body>
+
+<button type="button" onclick="twentyOne()">Middle</button>
+<br>
+<div id="output"></div>
+</body>
+</html>

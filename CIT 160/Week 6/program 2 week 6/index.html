@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Volume</title>
+
+<script>
+
+    /*input: two numbers and a arithmetic signal and it's result.
+*/
+    
+function calculate() {
+   var correctAnswer;
+    var ari = document.getElementById("ari").value;
+    var n1 = parseFloat(document.getElementById("number1").value);
+    var n2 = parseFloat(document.getElementById("number2").value);
+    var ans = parseFloat(document.getElementById("answer").value);
+    var mess;
+    if (ari == "+") {
+    correctAnswer = n1 + n2;
+                    
+                };
+    if (ari == "-") {
+                    correctAnswer = n1 - n2;
+                    
+                };
+                
+                if (ari == "*") {
+                    correctAnswer = n1 * n2;
+                    
+                };
+            
+                if (ari == "/") {
+                    correctAnswer = n1 / n2;
+                    
+                };
+    
+    if (correctAnswer == ans) {
+        mess = "Correct! Good job."
+    }
+    else {
+        mess = "Incorrect. Try again!"
+    };
+    document.getElementById("outputDiv").innerHTML = mess;
+}
+
+</script>
+</head>
+
+<body>
+<h1><b>Test Your Math Skills!</b></h1>
+<input type="text" id="number1" size="9">
+<input type="text" id="ari" size="3">
+<input type="text" id="number2" size="9">
+ = <input type="text" id="answer" size="9"><br>  
+<br>  
+<button type="button" onclick="calculate()">Check</button>  
+<div id="outputDiv"></div>  
+</body>
+</html>

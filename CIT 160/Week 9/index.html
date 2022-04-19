@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head  >
+<meta charset="utf-8">
+<title> The five times table from 1 to 12 </title>
+<script>
+/* show the five times table from 1 to 12 */
+function answer() {
+ var five = 5;
+var cal ="";
+         for (var i = 1; i <= 12; i++) {
+              cal += "5 x " + i + " = " + i * five + "<br>";
+            }
+    document.getElementById("output").innerHTML = cal;
+}
+</script>
+</head>
+<body>
+<h1><b>The five times table from 1 to 12</b></h1>
+<button type="button" onclick="answer()" >CHECK</button>     
+<div id="output"></div>
+</body>
+</html>

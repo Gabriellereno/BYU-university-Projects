@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset = "utf-8">
+<title>Increase Sales</title>
+
+<script>
+/*input an integer ans received a sum of the odd numbers.
+*/function answer() {
+var input = parseInt(document.getElementById("input").value);
+var conta = 0;
+for(var s = 0; s <= input; s++) {
+    if (s % 2 != 0) {
+    conta += s;
+    }
+ }
+document.getElementById("output").innerHTML = conta;
+}
+</script>
+</head>
+
+<body>
+Please enter an integer <input type="text" id = 'input'>
+<button type="button" onclick="answer()"> Calculate </button>
+<div id ='output'></div>
+</body>
+</html>

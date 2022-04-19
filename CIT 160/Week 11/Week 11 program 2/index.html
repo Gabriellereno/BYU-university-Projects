@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title> Loan Calculator </title>
+<script>
+/* Loan calculator */
+    function doPayment() {
+ var prin = parseFloat(document.getElementById("principal").value);
+ var annu = parseFloat(document.getElementById("annual").value);
+ var yea = parseFloat(document.getElementById("years").value);
+ var per = parseFloat(document.getElementById("periods").value);
+ var result = computePayment(prin, annu, yea, per)
+ document.getElementById("output1").innerHTML =  '$ ' + result;
+    
+}
+    function doBalance() {
+ var prin = parseFloat(document.getElementById("principal").value);
+ var annu = parseFloat(document.getElementById("annual").value);
+ var yea = parseFloat(document.getElementById("years").value);
+ var per = parseFloat(document.getElementById("periods").value);
+ var pai = parseFloat(document.getElementById("paid").value);
+ var result = computeBalance(prin, annu, yea, per, pai)
+ document.getElementById("output").innerHTML =  '$ ' + result;
+    
+}
+    function computePayment(principal, annualRate, years, periodsPerYear) {
+        var a = principal;
+        var b = annualRate / periodsPerYear;
+        var c = Math.pow(1 + b, -(years * periodsPerYear));
+        var P = (a * b) / (1 - c);
+        return P.toFixed(2);
+    }
+    function computeBalance(principal, annualRate, years, periodsPerYear, paid) {
+     var r = annualRate / periodsPerYear;
+        var n = paid;
+        var p = computePayment(principal, annualRate, years, periodsPerYear);
+        var B = principal * (Math.pow(1 + r, n)) - (p * (Math.pow(1 + r, n)-1)) / r;
+        return B.toFixed(2);
+    }
+
+</script>
+</head>
+<body>
+<h1><b>Loan Calculator</b></h1>
+Enter Amount borrowed <input type="text" id="principal" size="7">
+<br>
+Enter anuual interest rate <input type="text" id="annual" size="7">
+<br>
+Enter Numbers of years <input type="text" id="years" size="7">
+<br>
+Payments per year <input type="text" id="periods" size="7">
+<br>
+<button type="button" onclick="doPayment()" >compute payment </button>
+<div id="output1"></div>
+Numbers of payments paid to date <input type="text" id="paid" size="7">
+<br>
+<button type="button" onclick="doBalance()" >compute payoff amount</button> 
+<div id="output"></div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Test your math skills!</title>
+
+<script>
+/* Input: two numbers, an arithmetic operator, the answer
+* Processing: Determine if the answer is correct
+* Output: A message that says whether the answer is correct or not
+*/
+
+function answer() {
+// Get the user input from a text field.
+var x = 2, y = 6, z = 5;
+var result = (x < 3 && (y < 7))
+document.getElementById('outputDiv').innerHTML = result;
+}
+</script>
+
+</head>
+<body> 
+<b>Test your math skills!</b><br><input type="text" id="aInputBox" size="3"> <input type="text" id="operator" size="3"> <input type="text" id="bInputBox" size="3"> = <input type="text" id="cInputBox" size="3"><br>
+<button type="button" onclick="answer()">Check</button> <br>
+<div id="outputDiv"></div> 
+</body> 
+</html>

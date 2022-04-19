@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title> Investment Calculator </title>
+<script>
+/* Middle of elements */
+
+function getMiddle(list) {
+
+var length = list.length;
+var middle;
+if (length % 2 == 0) {
+middle = (list[length / 2] + list[length / 2 - 1]) / 2;
+}
+else {
+middle = list[(length - 1) / 2];
+}
+return middle;
+    
+}
+</script>
+</head>
+<body>
+<h1>Middle of elements Array</h1>
+<p> var list = [10, 11, 12, 13]</p>
+<button type="button" onclick="getMiddle()">Middle</button>
+<br>
+<div id="output"></div>
+</body>
+</html>

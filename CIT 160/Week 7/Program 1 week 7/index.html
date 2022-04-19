@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>TOTAL DUE by SALES TAX of 6%</title>
+
+<script>
+/* Enter the total custumer as input and received the total due by sales tax of 6 %.
+*/
+
+function answer() {
+// Get the user input from a text field.
+var sbt = parseFloat(document.getElementById('InputBox').value);
+var dayOfWeek = new Date().getDay();
+var tax;
+var total;    
+    if (sbt > 50 && dayOfWeek == 2 || dayOfWeek == 3) { 
+    tax = ((sbt * 90)/100);
+    total = (tax + (tax * 6)/100)    
+    }
+    else {
+      tax = (sbt * 6)/100;
+    total = sbt + tax;    
+    };
+    
+    
+    var result = total;    
+    
+    
+    
+document.getElementById('outputDiv').innerHTML = result;
+}
+</script>
+
+</head>
+<body> 
+<b>Customer’s subtotal input: </b><input type="text" id="InputBox" size="3">
+<br>
+<button type="button" onclick="answer()">total amount due</button> <br>
+<div id="outputDiv"></div> 
+</body> 
+</html>

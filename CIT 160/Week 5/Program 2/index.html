@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Volume</title>
+
+<script>
+/* Input: Beginning and ending odomoter readings and gallons of gasoline used
+* Processing: Calculate the miles per gallon
+* Output: the miles per gallon
+*/
+function milespergallon() {
+    
+    var b = parseFloat(document.getElementById('beginning').value);
+    var e = parseFloat(document.getElementById('ending').value);
+    var g = parseFloat(document.getElementById('gallon').value);
+
+    
+    var m = (e - b) / g;
+
+   
+    document.getElementById('outputDiv').innerHTML = m;
+}
+</script>
+</head>
+
+<body>
+Beginning odometer <input type="text" id="beginning" size="7"><br>  
+Ending odometer <input type="text" id="ending" size="7"><br>
+Gallons <input type="text" id="gallon" size="5"><br>
+<button type="button" onclick="milespergallon()">Miles per Gallon</button>  
+<div id="outputDiv"></div>  
+</body>
+</html>

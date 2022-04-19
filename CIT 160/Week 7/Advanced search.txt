@@ -1,0 +1,4 @@
+Google Search Query
+Pizza de Calabresa Porto Alegre Partenon OR Pizzaria OR rodizio OR a la carte -Pizza doce -borda -refrigerente
+Boolean Search Query
+Pizza de Calabresa && Porto Alegre && Partenon (Pizzaria || rodizio || a la carte !Pizza doce !borda !refrigerente

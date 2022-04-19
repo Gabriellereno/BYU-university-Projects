@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title> Investment Calculator </title>
+<script>
+/* Investment calculator */
+function doFV() {
+ var prin = parseFloat(document.getElementById("principal").value);
+ var annu = parseFloat(document.getElementById("annual").value);
+ var yea = parseFloat(document.getElementById("years").value);
+ var per = parseFloat(document.getElementById("periods").value);
+ var result = computeFutureValue(prin, annu, yea, per)
+ document.getElementById("output").innerHTML =  'Future Value is $ ' + result;
+    
+}
+    function computeFutureValue(principal, annualRate, years, periodsPerYear) {
+        var a = years * periodsPerYear;
+        var b = annualRate / periodsPerYear;
+        var c = 1 + b;
+        var d = Math.pow(c, a);
+        var F = principal * d;
+        return F.toFixed(2);
+    }
+
+</script>
+</head>
+<body>
+<h1><b>Compute Investment</b></h1>
+Enter principal<input type="text" id="principal" size="7">
+<br>
+Enter anuual rate<input type="text" id="annual" size="7">
+<br>
+Enter Years<input type="text" id="years" size="7">
+<br>
+Periods per year<input type="text" id="periods" size="7">
+<br>
+<button type="button" onclick="doFV()" >compute future value</button>     
+<div id="output"></div>
+</body>
+</html>

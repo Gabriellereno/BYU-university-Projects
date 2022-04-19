@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>SLEEP IN OR NOT</title>
+
+<script>
+/* Click to know if you can sleep or get up today.
+*/
+
+function answer() {
+var n = parseInt(document.getElementById('n').value);
+var month = now.getMonth();
+var dayOfMonth = now.getDate();
+var dayOfWeek = now.getDay();
+var ans;
+    if (dayOfMonth == 1 && month == 0 || dayOfMonth == 4 && month == 6 || dayOfMonth == 25 && month == 11 || dayOfWeek == 0 && dayOfWeek == 6) {
+        ans = "Sleep in.";
+    }
+    else {
+        ans = "Get up!";
+    };
+    
+    
+document.getElementById('outputDiv').innerHTML = n;
+}
+</script>
+
+</head>
+<body> 
+<b>ALL INTEGER</b>
+<br>
+<input type="text" id="n" size="7">
+<br>
+<button type="button" onclick="answer()">Click to know!</button> <br>
+<div id="outputDiv"></div> 
+</body> 
+</html>

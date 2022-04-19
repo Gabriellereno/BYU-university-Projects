@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Volume</title>
+
+<script>
+
+    /*Look your foot wear according to the weather
+*/
+    
+function footWear() {
+var w = document.getElementById('weather').value;
+    var shoes;
+    if (w == "hot") {
+        shoes = "sandals";
+    }
+    else if (w == "rain") {
+        shoes = "galoshes";
+    }
+    else if (w == "snow") {
+        shoes = "boots";
+    }
+    else {
+        shoes = "shoes";
+    }
+        var result = shoes;
+document.getElementById('outputDiv').innerHTML = shoes;
+    }
+</script>
+</head>
+
+<body>
+TYPE THE WEATHER <input type="text" id="weather" size="9"><br>  
+<br>  
+<button type="button" onclick="footWear()">Correct foot wear</button>  
+<div id="outputDiv"></div>  
+</body>
+</html>
